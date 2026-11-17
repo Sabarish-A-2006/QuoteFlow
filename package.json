@@ -1,0 +1,17 @@
+{
+  "name": "quoteflow",
+  "version": "1.0.0",
+  "description": "QuoteFlow – Quote Generator with History (Full-Stack)",
+  "type": "module",
+  "scripts": {
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "concurrently -n \"server,client\" -c \"blue,magenta\" \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "npm --prefix client run build",
+    "start": "NODE_ENV=production node server/server.js",
+    "test:backend": "npm --prefix server test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.5"
+  }
+}
